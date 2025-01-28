@@ -16,3 +16,13 @@
 .primaryBtn:hover{
   transform: translate(5px, -5px);
 }
+
+.videoSection{
+  min-height:100vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure it's above other content */
+}

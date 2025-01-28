@@ -11,7 +11,7 @@ const LogoSlide = () => {
   return (
     <>
       {/* Logo Slider */}
-      <div className="bg-gray-100 py-8">
+      <div className=" py-8">
         <Marquee gradient={false} speed={100}>
           {images.map((image, index) => (
             <img
