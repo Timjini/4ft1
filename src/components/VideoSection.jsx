@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LogoSlide from './LogoSlide';
+import { BUCKET_URL } from './common';
 
 const VideoSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,7 +27,7 @@ const VideoSection = () => {
                 <div className="py-4 px-4 md:px-24 mx-auto">
                     <video
                         className="rounded-lg neu-bg transform duration-300 transition ease-in-out hover:scale-101 hover:cursor-pointer"
-                        onClick={() => showModal('https://pub-bc4cae30cb704275a2d82ae56b32c9b6.r2.dev/cfs/short_video.mp4')}
+                        onClick={() => showModal(`${BUCKET_URL}/short_video.mp4`)}
                         style={{ width: 'auto', height: '65vh', objectFit: 'cover' }}
                         loading="lazy"
                         autoPlay
@@ -35,7 +36,7 @@ const VideoSection = () => {
                         playsInline
                     >
                         <source
-                            src="https://pub-bc4cae30cb704275a2d82ae56b32c9b6.r2.dev/cfs/short_video.mp4"
+                            src={`${BUCKET_URL}/short_video.mp4`}
                             type="video/mp4"
                         />
                         Your browser does not support the video tag.

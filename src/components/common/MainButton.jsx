@@ -1,9 +1,6 @@
 import { useState } from "react";
-import FormModal from "../modals/ContactModal";
 
-const MainButton = ({title, link}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleModal = () => setIsOpen(!isOpen);
+const MainButton = ({title, link, toggleModal}) => {
 
   return (
     <>
@@ -14,8 +11,6 @@ const MainButton = ({title, link}) => {
             </a>
         </button>
       </div>
-      {/* Modal Component */}
-      <FormModal isOpen={isOpen} toggleModal={toggleModal} />
     </>
 
   );

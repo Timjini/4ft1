@@ -1,6 +1,6 @@
 import MainButton from "./common/MainButton";
 
-const Hero = () => {
+const Hero = ({toggleModal}) => {
     return (
         <div className="relative isolate overflow-hidden bg-white px-6 py-12 sm:py-32 lg:overflow-visible lg:px-0 lg:max-h-screen">
             <div className="absolute inset-0 -z-10 overflow-hidden">
@@ -69,7 +69,7 @@ const Hero = () => {
                 <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
                     <div className="lg:pr-4">
                         <div className="p-4 max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <MainButton link="#" title="Book Dwain for your Event" />
+                            <MainButton link="#" title="Book Dwain for your Event" toggleModal={toggleModal} />
                             <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900 hidden"></h2>
                             <p className="mt-6 hidden"></p>
                         </div>

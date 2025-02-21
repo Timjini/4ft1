@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import MainButton from "../common/MainButton";
 import PhoneInput from "../common/PhoneInput";
 import LoadingButton from "../common/LoadingButton";
+import { BACKEND_URL } from "../common";
 
 const FormModal = ({ isOpen, toggleModal }) => {
   const [formData, setFormData] = useState({
+    title:"4f1t.com-contact-form",
     name: "",
     email: "",
     phone: "",
     message: "",
+    status: "new"
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -34,9 +37,8 @@ const FormModal = ({ isOpen, toggleModal }) => {
     setError(null);
     setSuccess(false);
     setLoading(true);
-    sleep(1000) 
     try {
-      const response = await fetch("https://your-endpoint.com/api/contact", {
+      const response = await fetch(`${BACKEND_URL}/forms`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -60,6 +62,11 @@ const FormModal = ({ isOpen, toggleModal }) => {
       setError(err.message);
     } finally {
       setIsSubmitting(false);
+      setLoading(false);
+      // setTimeout(() => {
+      //   toggleModal(false);
+      //   console.log("Delayed for 1 second.");
+      // }, "1000");      
     }
   };
 

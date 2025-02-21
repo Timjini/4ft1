@@ -1,7 +1,7 @@
 import React from "react";
 import MainButton from "./common/MainButton";
 
-const KeynotePresentation = () => {
+const KeynotePresentation = ({toggleModal}) => {
   return (
     <div className="bg-gray-50 min-h-screen flex items-center justify-center py-10">
       <div className="max-w-4xl bg-white rounded-2xl shadow-xl p-8">
@@ -30,7 +30,7 @@ const KeynotePresentation = () => {
         </div>
 
         <div className="mt-8 text-center">
-          <MainButton link="#" title="Book Dwain for Your Event" />
+          <MainButton link="#" title="Book Dwain for Your Event" toggleModal={toggleModal} />
         </div>
       </div>
     </div>

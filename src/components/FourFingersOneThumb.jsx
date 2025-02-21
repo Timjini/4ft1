@@ -1,7 +1,7 @@
 import React from "react";
 import MainButton from "./common/MainButton";
 
-const FourFingersOneThumb = () => {
+const FourFingersOneThumb = ({toggleModal}) => {
     const baseUrl = "https://pub-bc4cae30cb704275a2d82ae56b32c9b6.r2.dev/cfs/";
 
     return (
@@ -51,7 +51,7 @@ const FourFingersOneThumb = () => {
                         <li>Low performance – as opportunities are missed.</li>
                     </ul>
                     <div className="mt-8">
-                    <MainButton link="#" title="Book Dwain for your Event" />
+                    <MainButton link="#" title="Book Dwain for your Event" toggleModal={toggleModal} />
 
                     </div>
                 </div>
