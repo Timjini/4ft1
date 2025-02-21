@@ -39,8 +39,8 @@ const reviews = [
 ];
 
 const Reviews = () => {
-  const [currentIndex, setCurrentIndex] = useState(0); // Starting index of the visible cards
-  const cardsToShow = 3; // Number of cards to show at a time
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsToShow = 2; 
 
   const handlePrevious = () => {
     setCurrentIndex((prev) =>
@@ -70,7 +70,7 @@ const Reviews = () => {
       <h2 className="text-center text-3xl font-semibold mb-8">
         What Our Customers Say
       </h2>
-      <div className="relative max-w-4xl mx-auto">
+      <div className="relative max-w-4xl mx-auto flex flex-wrap  px-8 py-2">
         {/* Left Arrow */}
         <button
           onClick={handlePrevious}
@@ -79,7 +79,7 @@ const Reviews = () => {
           ❮
         </button>
 
-        <div className="flex space-x-4 justify-center">
+        <div className="mx-auto flex flex-wrap gap-4 justify-center">
           {visibleReviews.map(({ id, name, review, image }) => (
             <div
               key={id}

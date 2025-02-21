@@ -18,7 +18,7 @@ const LogoSlide = () => {
               key={index}
               src={`${baseUrl}${image}`}
               alt={`Logo ${index + 1}`}
-              className="mx-8 h-36 w-48 object-cover rounded-lg grayscale"
+              className="mx-8 h-32 w-36 object-cover rounded-lg grayscale"
             />
           ))}
         </Marquee>

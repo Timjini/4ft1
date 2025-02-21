@@ -1,11 +1,12 @@
 import React from "react";
 import MainButton from "./common/MainButton";
+import { BUCKET_URL } from "./common";
 
 const FourFingersOneThumb = ({toggleModal}) => {
     const baseUrl = "https://pub-bc4cae30cb704275a2d82ae56b32c9b6.r2.dev/cfs/";
 
     return (
-        <section className="relative isolate overflow-hidden bg-white min-h-screen flex items-center justify-center px-6 py-12 sm:py-24">
+        <section id="organization" className="relative isolate overflow-hidden bg-white min-h-screen flex items-center justify-center px-6 py-12 sm:py-24">
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <svg
                     className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-50 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -60,7 +61,7 @@ const FourFingersOneThumb = ({toggleModal}) => {
                 <div className="w-full lg:w-1/3 flex justify-center">
                     <a href="" target="_blank">
                         <img
-                            src={`${baseUrl}4F1T-Logo.png`}
+                            src={`${BUCKET_URL}/4F1T-Logo.png`}
                             alt="4 Fingers 1 Thumb Logo"
                             className="rounded-xl shadow-xl ring-1 ring-gray-400/10 max-w-full"
                         />

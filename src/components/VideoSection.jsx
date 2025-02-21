@@ -18,9 +18,9 @@ const VideoSection = () => {
 
     return (
         <>
-            <section className="flex flex-col p-4 justify-center content-center">
+            <section  id="dwain-in-action" className="flex flex-col p-4 justify-center content-center">
                 <div>
-                    <h1 className="ml1 title mb-6 font-sans text-4xl md:text-6xl font-bold tracking-tight sm:leading-none text-center uppercase">
+                    <h1 className="ml1 title mb-2 font-sans text-4xl md:text-6xl font-bold tracking-tight sm:leading-none text-center uppercase">
                         Dwain in Action
                     </h1>
                 </div>

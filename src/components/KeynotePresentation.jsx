@@ -3,7 +3,7 @@ import MainButton from "./common/MainButton";
 
 const KeynotePresentation = ({toggleModal}) => {
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center justify-center py-10">
+    <div id="keynote" className="bg-gray-50 min-h-screen flex items-center justify-center py-10">
       <div className="max-w-4xl bg-white rounded-2xl shadow-xl p-8">
         <h2 className="text-3xl font-bold text-gray-800 text-center">
           Dwain Chambers—Run, Talk, Coach, Win

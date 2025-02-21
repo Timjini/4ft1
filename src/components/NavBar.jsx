@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BUCKET_URL } from './common';
+import React, { useState } from "react";
+import { BUCKET_URL } from "./common";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,8 +8,14 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const links = [
+    { href: "#organization", text: "Organization" },
+    { href: "#dwain-in-action", text: "Dwain in Action" },
+    { href: "#keynote", text: "Keynote" },
+  ];
+
   return (
-    <nav className="bg-gray-100 p-4">
+    <nav className="bg-gray-50 p-4">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -24,18 +30,15 @@ const Navbar = () => {
 
         {/* Menu items (centered on large screens) */}
         <div className="hidden md:flex justify-center space-x-8 flex-grow">
-          <a href="/" className="text-gray-900 hover:text-gray-400 uppercase">
-            Home
-          </a>
-          <a href="/about" className="text-gray-900 hover:text-gray-400 uppercase">
-            About
-          </a>
-          <a href="/services" className="text-gray-900 hover:text-gray-400 uppercase">
-            Services
-          </a>
-          <a href="/contact" className="text-gray-900 hover:text-gray-400 uppercase">
-            Contact
-          </a>
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="font-bold text-gray-900 hover:text-gray-400 uppercase"
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
 
         {/* Burger menu (visible on small screens) */}
@@ -65,18 +68,15 @@ const Navbar = () => {
       {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-100 text-gray-900 flex flex-col items-center space-y-4 py-4">
-          <a href="/" className="hover:text-gray-400">
-            Home
-          </a>
-          <a href="/about" className="hover:text-gray-400">
-            About
-          </a>
-          <a href="/services" className="hover:text-gray-400">
-            Services
-          </a>
-          <a href="/contact" className="hover:text-gray-400">
-            Contact
-          </a>
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              className="text-gray-900 hover:text-gray-400 uppercase"
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
       )}
     </nav>
