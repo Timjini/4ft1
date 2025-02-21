@@ -3,6 +3,7 @@ import MainButton from "../common/MainButton";
 import PhoneInput from "../common/PhoneInput";
 import LoadingButton from "../common/LoadingButton";
 import { BACKEND_URL } from "../common";
+import axios from "axios";
 
 const FormModal = ({ isOpen, toggleModal }) => {
   const [formData, setFormData] = useState({
@@ -38,12 +39,10 @@ const FormModal = ({ isOpen, toggleModal }) => {
     setSuccess(false);
     setLoading(true);
     try {
-      const response = await fetch(`${BACKEND_URL}/forms`, {
-        method: "POST",
+      const response = await axios.post(`${BACKEND_URL}/forms`, formData, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
       });
       console.log("-======? ", response)
       if (!response.ok) {
