@@ -45,7 +45,7 @@ const FormModal = ({ isOpen, toggleModal }) => {
         },
       });
       console.log("-======? ", response)
-      if (!response.ok) {
+      if (response?.data?.status != 'success') {
         throw new Error("Failed to send the form. Please try again later.");
       }
 
