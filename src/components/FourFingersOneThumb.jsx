@@ -39,7 +39,7 @@ const FourFingersOneThumb = ({toggleModal}) => {
                 <div className="w-full lg:w-1/2 text-center lg:text-left">
                     <a href="" target="_blank">
                         <h1 className="uppercase text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-4">
-                            Four Fingers One Thumb
+                            4 Fingers 1 Thumb
                         </h1>
                     </a>
                     <p className="italic text-lg font-semibold text-gray-800 border-b-2 border-red-700 mb-6">

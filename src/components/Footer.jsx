@@ -2,7 +2,7 @@ import { BUCKET_URL } from "./common";
 
 const Footer = () => {
   const links = [
-    { href: "#organization", text: "Organization" },
+    { href: "#organization", text: "Organisation" },
     { href: "#dwain-in-action", text: "Dwain in Action" },
     { href: "#keynote", text: "Keynote" },
   ];
