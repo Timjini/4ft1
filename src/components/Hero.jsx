@@ -34,7 +34,7 @@ const Hero = ({toggleModal}) => {
                             <p className="text-base font-semibold leading-7 text-indigo-600"></p>
                             <a href="" target="_blank">
                                 <h1 className="uppercase px-4 mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                    Four Fingers One Thumb
+                                    4 Fingers 1 Thumb
                                 </h1>
                             </a>
                             <p className="my-8 italic text-xl font-semibold text-gray-800 border-l-4 border-red-700 pl-4">

@@ -9,13 +9,13 @@ const Navbar = () => {
   };
 
   const links = [
-    { href: "#organization", text: "Organization" },
+    { href: "#organization", text: "Organisation" },
     { href: "#dwain-in-action", text: "Dwain in Action" },
     { href: "#keynote", text: "Keynote" },
   ];
 
   return (
-    <nav className="bg-gray-50 p-4">
+    <nav className=" p-4">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -23,7 +23,7 @@ const Navbar = () => {
             <img
               src={`${BUCKET_URL}/4F1T-Logo.png`}
               alt="Logo"
-              className="w-auto h-12 md:h-18"
+              className="w-auto h-18 md:h-24"
             />
           </a>
         </div>
